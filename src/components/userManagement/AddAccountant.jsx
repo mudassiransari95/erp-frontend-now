@@ -90,7 +90,7 @@ const AddAccountant = ({onAccountantCreated}) => {
        {/* <div className="card border-primary col-11 " style={{marginLeft:"50px"}}>
   <div  className="card-header">  
   <h5 className="card-title">ADD ACCOUNTANT</h5>
-  <div style={{marginLeft:"600px"}} class="btn-group" role="group" aria-label="Basic outlined example">
+  <div style={{marginLeft:"600px"}} class="btn-group" role="group" aria-p="Basic outlined example">
   <button type="button" class="btn btn-outline-primary"><Link to="/accountant">Accountant list</Link></button>
   <button type="button" class="btn btn-outline-primary">Create Accountant</button>
  
@@ -103,12 +103,12 @@ const AddAccountant = ({onAccountantCreated}) => {
     <div style={{display:"flex" , justifyContent:"space-evenly"}} className="container">
     <div>
     <div  className="input-wrapper " >
-      <label htmlFor="first">Full Name</label>
+      <p htmlFor="first">Full Name</p>
       <input style={{width:"300px"}}  placeholder="first Name" type="text" />
     </div>
     <div  className="my-2 ">
      
-      <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+      <select class="form-select" id="inputGroupSelect04" aria-p="Example select with button addon">
         <option selected>Role</option>
         <option value="1">Admin</option>
         <option value="2">Accountant</option>
@@ -117,7 +117,7 @@ const AddAccountant = ({onAccountantCreated}) => {
  
     </div>
     <div  className="input-wrapper ">
-      <label htmlFor="first">Password</label>
+      <p htmlFor="first">Password</p>
       <input style={{width:"300px"}}  placeholder="password" type="text" />
     </div>
     
@@ -125,15 +125,15 @@ const AddAccountant = ({onAccountantCreated}) => {
     <div>
     <div  className="input-wrapper ">
       
-      <label htmlFor="first">Phone</label>
+      <p htmlFor="first">Phone</p>
       <input style={{width:"300px"}}  placeholder="phone" type="text" />
     </div>
     <div  className="input-wrapper " >
-      <label htmlFor="first">Admin Name</label>
+      <p htmlFor="first">Admin Name</p>
       <input style={{width:"300px"}}  placeholder="Admin Name" type="text" />
     </div>
     <div  className="input-wrapper ">
-      <label htmlFor="first">confirm password</label>
+      <p htmlFor="first">confirm password</p>
       <input style={{width:"300px"}}  placeholder="confirm password" type="text" />
     </div>
     </div>
@@ -159,7 +159,7 @@ const AddAccountant = ({onAccountantCreated}) => {
             style={{ marginLeft: "600px" }}
             className="btn-group"
             role="group"
-            aria-label="Basic outlined example"
+            aria-p="Basic outlined example"
           >
             <Link to={"/accountant"}>
               <button type="button" className="btn btn-outline-primary">
@@ -178,7 +178,7 @@ const AddAccountant = ({onAccountantCreated}) => {
             <div style={{ display: "flex", justifyContent: "space-evenly" }} className="container">
               <div>
                 <div className="input-wrapper ">
-                  <label htmlFor="first">Full Name</label>
+                  <p htmlFor="first">Full Name</p>
                   <input
                     ref={fullNameRef}
                     style={{ width: "300px" }}
@@ -191,7 +191,7 @@ const AddAccountant = ({onAccountantCreated}) => {
                     ref={roleRef}
                     className="form-select"
                     id="inputGroupSelect04"
-                    aria-label="Example select with button addon"
+                    aria-p="Example select with button addon"
                   >
                     <option value="">Role</option>
                     <option value="Accountant">admin</option>
@@ -200,7 +200,7 @@ const AddAccountant = ({onAccountantCreated}) => {
                   </select>
                 </div>
                 <div className="input-wrapper ">
-                  <label htmlFor="first">Password</label>
+                  <p htmlFor="first">Password</p>
                   <input
                     ref={passwordRef}
                     style={{ width: "300px" }}
@@ -211,7 +211,7 @@ const AddAccountant = ({onAccountantCreated}) => {
               </div>
               <div>
                 <div className="input-wrapper ">
-                  <label htmlFor="first">Phone</label>
+                  <p htmlFor="first">Phone</p>
                   <input
                     ref={phoneRef}
                     style={{ width: "300px" }}
@@ -220,7 +220,7 @@ const AddAccountant = ({onAccountantCreated}) => {
                   />
                 </div>
                 <div className="input-wrapper ">
-                  <label htmlFor="first">User Name</label>
+                  <p htmlFor="first">User Name</p>
                   <input
                     ref={userNameRef}
                     style={{ width: "300px" }}
@@ -229,7 +229,7 @@ const AddAccountant = ({onAccountantCreated}) => {
                   />
                 </div>
                 <div className="input-wrapper ">
-                  <label htmlFor="first">Confirm Password</label>
+                  <p htmlFor="first">Confirm Password</p>
                   <input
                     ref={confirmPasswordRef}
                     style={{ width: "300px" }}

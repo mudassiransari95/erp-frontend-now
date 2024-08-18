@@ -8,6 +8,8 @@ import { HiDotsVertical } from "react-icons/hi";
 import { useReactToPrint } from 'react-to-print';
 import jsPDF from 'jspdf'
 import 'jspdf-autotable'
+import { MdDelete } from 'react-icons/md';
+import { FaEdit } from "react-icons/fa";
 const Samplelist = () => {
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
@@ -42,6 +44,22 @@ navigate(`/search?q=${value}`)
     navigate('/search')
   }
 }
+
+// handle delete cnsdkjfhudiskjf
+
+
+const handledelete=async(id)=>{
+  console.log('id',id)
+
+
+  const res=await fetch(`http://localhost:8080/api/delete/${id}`,{
+    method:'delete',
+  })
+  const response=await res.json()
+  console.log('response',response)
+  handleGetAllData()
+}
+
 useEffect(()=>{
   handleGetAllData()
 },[])
@@ -107,11 +125,16 @@ useEffect(()=>{
       <td>{ele.SampleType}</td>
       <td>{ele.GarmentsQty}</td>
       <td>pending</td>
-      <td className='relative '>
-        <p className='ml-3'>   <HiDotsVertical/></p>
-     
-     
-        </td>
+      <td  className='flex items-center h-12 gap-1'>  
+                            <Link  to={`/editorderlist?q=${ele._id}`} className='w-6 hover:bg-green-200 h-6 flex justify-center items-center bg-green-100'>
+                            <FaEdit/>
+                            </Link>
+                            <div onClick={()=>handledelete(ele._id)} className='w-6 hover:bg-red-200 h-6 flex justify-center items-center bg-red-100'>
+
+                            <MdDelete/>
+                  
+       </div>
+                          </td>  
      
     </tr> 
       )

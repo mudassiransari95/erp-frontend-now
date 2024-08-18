@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { FaBars } from 'react-icons/fa';
+import { FaBars, FaEdit } from 'react-icons/fa';
 import { IoMdNotificationsOutline } from 'react-icons/io';
 import { FaUserAlt } from 'react-icons/fa';
 import { GrDocumentPdf } from 'react-icons/gr';
@@ -9,6 +9,9 @@ import { PiArrowCounterClockwise } from "react-icons/pi";
 import { FaUser } from "react-icons/fa";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 import { HiDotsVertical } from 'react-icons/hi';
+import { MdDelete } from 'react-icons/md';
+import { Link } from 'react-router-dom';
+
 const PurchaseReport = () => {
 const [alldata, setalldata] = useState([]);
     const [showProfile, setshowProfile] = useState(false);
@@ -18,6 +21,21 @@ const [alldata, setalldata] = useState([]);
       console.log('purchaesssssssssss',getdata)
       setalldata(getdata.data)
     }
+    const handledelete=async(id)=>{
+      console.log('id',id)
+    
+    
+      const res=await fetch(`http://localhost:8080/api/deletepurchasedata/${id}`,{
+        method:'delete',
+        headers:{
+          'content-type':'application/json'
+        }
+      })
+      const response=await res.json()
+      console.log('response',response)
+      getallpurchase()
+    }
+    
     useEffect(()=>{
       getallpurchase()
     },[])
@@ -137,11 +155,17 @@ const [alldata, setalldata] = useState([]);
 <td>{ele.TotalPaid}</td>
 <td>{ele.TotalDue}</td>
 <td>completed</td>
-<td className='relative '>
-        <p className='ml-3'>   <HiDotsVertical/></p>
-       
-     
-        </td>
+
+<td  className='flex items-center h-12 gap-1'>  
+                            <Link  to={`/editorderlist?q=${ele._id}`} className='w-6 hover:bg-green-200 h-6 flex justify-center items-center bg-green-100'>
+                            <FaEdit/>
+                            </Link>
+                            <div onClick={()=>handledelete(ele._id)} className='w-6 hover:bg-red-200 h-6 flex justify-center items-center bg-red-100'>
+
+                            <MdDelete/>
+                  
+       </div>
+                          </td>  
 
 
               </tr>
@@ -153,7 +177,7 @@ const [alldata, setalldata] = useState([]);
         
           
        
-
+ 
 
 
 

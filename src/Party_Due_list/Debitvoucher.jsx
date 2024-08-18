@@ -3,27 +3,18 @@ import { Link } from 'react-router-dom'
 
 const Debitvoucher = () => {
   return (
-    <div className='w-75 bg-white pl-4' style={{height:"100vh"}}>
+    <div className='w-100 bg-white px-3' style={{height:"100vh"}}>
             <div className='w-auto pt-4 mt-10 h-10 flex flex-row justify-between '> 
 <h1 className='fw-bold'>Debit Voucher</h1>
-<div className='sub-div w-auto h-10'>
-
-<Link to='/debitvoucher' className='w-40 h-10 ms-8 bg-purple-500  text-white ' style={{fontWeight:"bold",border:"1px solid purple",borderTop:"none",borderRight:"none",borderLeft:"none",borderRadius:"10px"}}>Debit list</Link>
-<Link to='/' className='w-40 h-10 ms-8 bg-purple-500 text-white  ' style={{border:"1px solid purple",borderTop:"none",borderRight:"none",borderLeft:"none",borderRadius:"10px",fontWeight:"bold"}}> Create Debit</Link>
-
+<div className=' w-80 flex justify-between h-9' style={{border:"1px solid purple",borderTop:"none",borderRight:"none",borderLeft:"none"}}>
+<Link  className='w-36  pl-3 pt-2 font-semibold  h-9 text-white rounded-t-md bg-purple-700' style={{border:"1px solid purple",borderTop:"none",borderRight:"none",borderLeft:"none"}}>Debit List</Link>
+<Link to='/createdebit' className='w-64 h-9 text-md text-center text-black  pt-2 pl-3' style={{border:"1px solid purple",borderTop:"none",borderRight:"none",borderLeft:"none"}}>Create Debit </Link>
 
 </div>
       </div>
       <hr className='bg-red-400 mt-5 w-100 '/>
       
-      <div className=' w-auto doller-container flex flex-row gap-5 mt-5 ms-3'>
-
-
-
-
-
-
-      </div>
+     
       {/* form */}
       <div className='form w-100    flex fle-row  '>
      

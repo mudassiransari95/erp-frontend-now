@@ -7,14 +7,27 @@ import { FaFilePdf } from "react-icons/fa6";
 import { FaFileCsv } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { HiDotsVertical } from 'react-icons/hi';
+import { MdDelete } from 'react-icons/md';
+import { FaEdit } from "react-icons/fa";
+import axios from 'axios'
 const Shipmentslist = () => {
-
+  // updateshipmentdata
 const [alldata, setalldata] = useState([]);
   const handlegetdata=async()=>{
-      const res=await fetch('http://localhost:8080/api/getallshipmentdata')
-      const getdata=await res.json()
-      console.log('shipment dataaaaaaaaaaaaaaaaaa',getdata)
-      setalldata(getdata.data)
+      const res=await axios.get('http://localhost:8080/api/getallshipmentdata')
+   
+      console.log('shipment dataaaaaaaaaaaaaaaaaa',res)
+      setalldata(res.data)
+        }
+        const handledelete=async(id)=>{
+          console.log('id',id)
+        
+          const res=await fetch(`http://localhost:8080/api/deleteshipmentdata/${id}`,{
+            method:'delete',
+          })
+          const response=await res.json()
+          console.log('response',response)
+          handlegetdata()
         }
 
 useEffect(()=>{
@@ -97,11 +110,15 @@ createdAt
 
 
 }</td>
-<td className='relative '>
-        <p className='ml-3'>   <HiDotsVertical/></p>
-     
-     
-        </td>
+<td  className='flex items-center h-12 gap-1'>  
+                            <Link  to={'/editbudgetlist'} className='w-6 hover:bg-green-200 h-6 flex justify-center items-center bg-green-100'>
+                            <FaEdit/>
+                            </Link>
+                            <div onClick={()=>handledelete(ele._id)} className='w-6 hover:bg-red-200 h-6 flex justify-center items-center bg-red-100'>
+                            <MdDelete/>                 
+       </div>
+  
+                          </td>  
         </tr>
         )
       })

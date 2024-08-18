@@ -6,6 +6,8 @@ import { FaFileCsv, FaFilePdf } from 'react-icons/fa';
 import { useReactToPrint } from 'react-to-print';
 import jsPDF from 'jspdf'
 import 'jspdf-autotable'
+import { FaEdit } from 'react-icons/fa';
+import { MdDelete } from 'react-icons/md';
 const Booklist = () => {
 
 
@@ -41,7 +43,16 @@ const getalldata=async()=>{
 
 }
 
+const handledelete=async(id)=>{
+  console.log('id',id)
 
+  const res=await fetch(`http://localhost:8080/booking/delete/${id}`,{
+    method:'delete',
+  })
+  const response=await res.json()
+  console.log('response',response)
+  getalldata()
+}
 useEffect(()=>{
   getalldata()
 },[])
@@ -194,6 +205,15 @@ Booking List        </h2>
                             <td>{ele.rib}</td>
                             <td>{ele.collar}</td>
                             <td>{ele.status}</td>
+                            <td  className='flex items-center h-12 gap-1'>  
+                            <Link  className='w-6 hover:bg-green-200 h-6 flex justify-center items-center bg-green-100'>
+                            <FaEdit/>
+                            </Link>
+                            <div onClick={()=>handledelete(ele._id)} className='w-6 hover:bg-red-200 h-6 flex justify-center items-center bg-red-100'>
+                            <MdDelete/>                 
+       </div>
+  
+                          </td>  
                           </tr>
                         )
                       })

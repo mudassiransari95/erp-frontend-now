@@ -4,6 +4,7 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 import { FaUserAlt } from "react-icons/fa";
 import { GrDocumentPdf } from "react-icons/gr";
 import { BsFiletypeScss } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 const Add_New_Booking = () => {
   return (
     <div className='w-100 bg-white' style={{height:"100vh"}}>
@@ -12,7 +13,7 @@ const Add_New_Booking = () => {
 <h1 className='fw-bold ms-3'>Add Booking Form </h1>
 
 <div className='sub-div w-96 ms-8  h-10'>
-<button className='w-28  text-white ms-3 h-10 bg-purple-700 ' style={{border:"1px solid purple",borderTop:"none",borderRight:"none",borderLeft:"none"}}>Booking  List</button>
+<Link to={'/Booking_List'} className='w-28  text-white ms-3 h-10 bg-purple-700 ' style={{border:"1px solid purple",borderTop:"none",borderRight:"none",borderLeft:"none"}}>Booking  List</Link>
 <button className='w-40 h-10 ms-8 ' style={{border:"1px solid purple",borderTop:"none",borderRight:"none",borderLeft:"none"}}>Add New Booking</button>
 
 </div>

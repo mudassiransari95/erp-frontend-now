@@ -65,11 +65,18 @@ const Sidebar = (props) => {
       children: [
         { key: '5-1', label: 'Commercial' },
         { key: '5-2', label: 'General'},
+        { key: '5-3', label: 'Income',link:'/Income'},
+        { key: '5-4', label: 'Expenses',link:'/expenselist'},
+        { key: '5-5', label: 'Credit Voucher',link:'/creditvoucherlist'},
+        { key: '5-6', label: 'Debit Voucher',link:'/debitvoucherlist'},
+        { key: '5-7', label: 'Monthly Transaction',link:'/monthalytransaction'},
+        { key: '5-8', label: 'Party Legder',link:'/partyledger'},
+        { key: '5-9', label: 'Daily Cashbook',link:'/dailycashbook'},
       ]
     },
     { key: '6', icon: <InsertChartIcon />, label: 'Party List',
       children: [
-        { key: '6-1', label: 'Buyers', link:"/buyers" },
+        { key: '6-1', label: 'Buyers', link:"/buyerlist" },
         { key: '6-2', label: 'Suppliers',link:"/suppliers" },
   
       ]

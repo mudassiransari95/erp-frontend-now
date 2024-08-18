@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import createcontext from './CreateStore';
 
 const Context = (props) => {
+  const [passalldata, setpassalldata] = useState('');
 const [superadminid, setsuperadminid] = useState('');
     const SuperAdminData=async()=>{
 const res=await fetch('http://localhost:8080/api/adminprofile')
@@ -13,7 +14,7 @@ useEffect(()=>{
     SuperAdminData()
 },[])
   return (
-    <createcontext.Provider value={{SuperAdminData,superadminid}}>
+    <createcontext.Provider value={{SuperAdminData,superadminid ,setpassalldata,passalldata}}>
         {props.children}
     </createcontext.Provider>
   )

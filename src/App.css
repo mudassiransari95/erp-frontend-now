@@ -258,6 +258,9 @@ body {
 select::-ms-expand{
   display: none;
 }
+.widthone {
+  width: 55rem;
+}
 
 
 /* ...... */

@@ -72,10 +72,20 @@ import Adddnewincomecategory from './Party_Due_list/Addnewincomecategory';
 import Createcredit from './Party_Due_list/CreateCredit';
 import SearchSamplelist from './orderManagement/Order_List/sample/SearchSamplelist';
 import Buyerlist from './party_List/Buyer';
-import Createaddsupplier from './Party_Due_list/CreateAddsupplier';
+import Createaddsupplier from './party_List/AddnewSupplier';
 import Addnewbuyer from './party_List/AddBuyer'
 import SupplierDue from './components/Report/SupplierDue';
-
+import Adddnewexpense from "./Party_Due_list/Addnewexpense";
+import Expenselist from './Party_Due_list/Expenselist';
+import Creditvoucher from './Party_Due_list/Creditvoucher';
+import Debitvoucher from './Party_Due_list/Debitvoucher';
+import Createdebit from './Party_Due_list/CreateDebit';
+import MonthalyTransaction from './Party_Due_list/MonthalyTransaction';
+import Partyledger from './Party_Due_list/Partyledger';
+import PartyledgerSupplier from './Party_Due_list/PartyledgerSupplier';
+import DailyCashbook from './Party_Due_list/DailyCashbook';
+import EditBudgetlist from './orderManagement/Order_List/Budget_list/EditBudgetlist';
+import EditOrderlist from './orderManagement/Order_List/EditOrderlist'
 
 
 
@@ -143,7 +153,7 @@ function App() {
             <Route path="/bookinglist" element={<Booklist/>} />
             <Route path="/addNewbooklist/:id?" element={<AddNeworder/>} />
             <Route path="/budgetlist" element={<Booklist/>} />
-            <Route path="/addnewbudget/:id?" element={<Addnewbudget/>} />
+            <Route path="/addnewbudget" element={<Addnewbudget/>} />
             <Route path="/costing" element={<Costinglist/>} />
             <Route path="/sample" element={<Orderlist/>} />
             <Route path="/shipmentlist" element={<Shipmentslist/>} />
@@ -171,12 +181,24 @@ function App() {
             <Route path="/incomeList" element={<IncomeList/>}/>
             <Route path="/Income" element={<Incomelist/>}/>
             <Route path="/addnewincome" element={<Adddnewincomecategory/>}/>
-            <Route path="/creditlist" element={<Createcredit/>}/>
+            <Route path="/createcredit" element={<Createcredit/>}/>
             <Route path="/addnewsupplier" element={<Createaddsupplier/>} />
 
             <Route path="/addnewbuyer" element={<Addnewbuyer/>}/>
             <Route path="/buyerlist" element={<Buyerlist/>}/>
             <Route path="/supplierdue" element={<SupplierDue/>}/>
+            <Route path="/supplierdue" element={<SupplierDue/>}/>
+            <Route path="/addnewexpense" element={<Adddnewexpense/>}/>
+            <Route path="/expenselist" element={<Expenselist/>}/>
+            <Route path="/creditvoucherlist" element={<Creditvoucher/>}/>
+            <Route path="/debitvoucherlist" element={<Debitvoucher/>}/>
+            <Route path="/createdebit" element={<Createdebit/>}/>
+            <Route path="/monthalytransaction" element={<MonthalyTransaction/>}/>
+            <Route path="/partyledger" element={<Partyledger/>}/>
+            <Route path="/partyledgersupplier" element={<PartyledgerSupplier/>}/>
+            <Route path="/dailycashbook" element={<DailyCashbook/>}/>
+            <Route path="/editbudgetlist" element={<EditBudgetlist/>}/>
+            <Route path="/editorderlist" element={<EditOrderlist/>}/>
        
 
 

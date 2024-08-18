@@ -95,7 +95,7 @@ const AddBuyer = ({onBuyerCreated}) => {
 //          <div className="card border-primary col-11 " >
 //   <div  className="card-header">  
 //   <h5 className="card-title">ADD BUYER</h5>
-//   <div style={{marginLeft:"600px"}} class="btn-group" role="group" aria-label="Basic outlined example">
+//   <div style={{marginLeft:"600px"}} class="btn-group" role="group" aria-p="Basic outlined example">
 //     <Link to={"/buyer"}>
 //   <button type="button" class="btn btn-outline-primary">Buyers list</button>
 //     </Link >
@@ -111,12 +111,12 @@ const AddBuyer = ({onBuyerCreated}) => {
 //     <div style={{display:"flex" , justifyContent:"space-evenly"}} className="container">
 //     <div>
 //     <div  className="input-wrapper " >
-//       <label htmlFor="first">Full Name</label>
+//       <p htmlFor="first">Full Name</p>
 //       <input style={{width:"300px"}}  placeholder="first Name" type="text" />
 //     </div>
 //     <div  className="my-2 ">
-//       {/* <label htmlFor="first">Role</label> */}
-//       <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+//       {/* <p htmlFor="first">Role</p> */}
+//       <select class="form-select" id="inputGroupSelect04" aria-p="Example select with button addon">
 //         <option selected>Role</option>
 //         <option value="1">Buyer</option>
 //         <option value="2">Buyer</option>
@@ -125,7 +125,7 @@ const AddBuyer = ({onBuyerCreated}) => {
 //       {/* <input style={{width:"300px"}}  placeholder="phone" type="text" /> */}
 //     </div>
 //     <div  className="input-wrapper ">
-//       <label htmlFor="first">Password</label>
+//       <p htmlFor="first">Password</p>
 //       <input style={{width:"300px"}}  placeholder="password" type="text" />
 //     </div>
     
@@ -133,21 +133,21 @@ const AddBuyer = ({onBuyerCreated}) => {
 //     <div>
 //     <div  className="input-wrapper ">
       
-//       <label htmlFor="first">Phone</label>
+//       <p htmlFor="first">Phone</p>
 //       <input style={{width:"300px"}}  placeholder="phone" type="text" />
 //     </div>
 //     <div  className="input-wrapper " >
-//       <label htmlFor="first">Buyer Name</label>
+//       <p htmlFor="first">Buyer Name</p>
 //       <input style={{width:"300px"}}  placeholder="Buyer Name" type="text" />
 //     </div>
 //     <div  className="input-wrapper ">
-//       <label htmlFor="first">confirm password</label>
+//       <p htmlFor="first">confirm password</p>
 //       <input style={{width:"300px"}}  placeholder="confirm password" type="text" />
 //     </div>
 //     </div>
 //     <div style={{display:"flex",flexDirection:"column"}}>
 //     <img style={{borderRadius:"100%",border:"1px solid black",height:"150px",width:"150px"}} src="https://i.pinimg.com/474x/d8/0d/d2/d80dd2f38a99249677afa2cb58757992.jpg" alt="" />
-//     {/* <label  htmlFor="">Upload Image</label> */}
+//     {/* <p  htmlFor="">Upload Image</p> */}
 //     <input type="file" />
 //     </div>
        
@@ -170,7 +170,7 @@ const AddBuyer = ({onBuyerCreated}) => {
             style={{ marginLeft: "600px" }}
             className="btn-group"
             role="group"
-            aria-label="Basic outlined example"
+            aria-p="Basic outlined example"
           >
             <Link to={"/buyer"}>
               <button type="button" className="btn btn-outline-primary">
@@ -189,7 +189,7 @@ const AddBuyer = ({onBuyerCreated}) => {
             <div style={{ display: "flex", justifyContent: "space-evenly" }} className="container">
               <div>
                 <div className="input-wrapper ">
-                  <label htmlFor="first">Full Name</label>
+                  <p htmlFor="first">Full Name</p>
                   <input
                     ref={fullNameRef}
                     style={{ width: "300px" }}
@@ -202,7 +202,7 @@ const AddBuyer = ({onBuyerCreated}) => {
                     ref={roleRef}
                     className="form-select"
                     id="inputGroupSelect04"
-                    aria-label="Example select with button addon"
+                    aria-p="Example select with button addon"
                   >
                     <option value="">Role</option>
                     <option value="Buyer">admin</option>
@@ -211,7 +211,7 @@ const AddBuyer = ({onBuyerCreated}) => {
                   </select>
                 </div>
                 <div className="input-wrapper ">
-                  <label htmlFor="first">Password</label>
+                  <p htmlFor="first">Password</p>
                   <input
                     ref={passwordRef}
                     style={{ width: "300px" }}
@@ -222,7 +222,7 @@ const AddBuyer = ({onBuyerCreated}) => {
               </div>
               <div>
                 <div className="input-wrapper ">
-                  <label htmlFor="first">Phone</label>
+                  <p htmlFor="first">Phone</p>
                   <input
                     ref={phoneRef}
                     style={{ width: "300px" }}
@@ -231,7 +231,7 @@ const AddBuyer = ({onBuyerCreated}) => {
                   />
                 </div>
                 <div className="input-wrapper ">
-                  <label htmlFor="first">User Name</label>
+                  <p htmlFor="first">User Name</p>
                   <input
                     ref={userNameRef}
                     style={{ width: "300px" }}
@@ -240,7 +240,7 @@ const AddBuyer = ({onBuyerCreated}) => {
                   />
                 </div>
                 <div className="input-wrapper ">
-                  <label htmlFor="first">Confirm Password</label>
+                  <p htmlFor="first">Confirm Password</p>
                   <input
                     ref={confirmPasswordRef}
                     style={{ width: "300px" }}

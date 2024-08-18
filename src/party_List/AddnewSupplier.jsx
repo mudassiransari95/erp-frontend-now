@@ -41,7 +41,7 @@ const Createaddsupplier = () => {
  
   
   
-  const res=await fetch('http://localhost:8080/api/create',{
+  const res=await fetch('http://localhost:8080/api/createSupplier',{
     method:'post',
     headers:{
       'content-type':'application/json'
@@ -57,7 +57,7 @@ const Createaddsupplier = () => {
         <div className='w-75  ' style={{ height: "40rem" }}>
             <div className='w-auto mt-3  h-16 flex flex-row justify-between '>
                 <h4 className='fw-bold'>Add  Supplier</h4>
-                <div className='sub-div  w-auto h-16 mb-4 ' style={{ borderLeft: "none", borderRight: "none", borderTop: "none" }}>
+                <div className='sub-div  w-auto h-16 mb-4 bg-red-800' style={{ borderLeft: "none", borderRight: "none", borderTop: "none" }}>
                 
                 
 
@@ -95,7 +95,7 @@ const Createaddsupplier = () => {
                     </div>
                    
                 
-                   
+                    
                  
                     
                 

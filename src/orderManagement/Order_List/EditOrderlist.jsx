@@ -1,15 +1,12 @@
 import React, { useRef, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 
 
 
-const AddNeworder = ({handlealldatalist,allorderdata}) => {
+const EditOrderlist = ({seteditdata,allorderdata}) => {
 
   const navigate=useNavigate()
-
-
-
 const [data, setdata] = useState({
   orderNo:'',
   image:'',
@@ -40,23 +37,18 @@ console.log(data)
     })
       }
 
-  const handleSubmit=async()=>{
 
-
-
-const res=await fetch('http://localhost:8080/order/create',{
-  method:'post',
+  const handleEdit=async()=>{
+const res=await fetch(`http://localhost:8080/order/update`,{
+  method:'put',
   headers:{
     'content-type':'application/json'
   },
   body:JSON.stringify(data)
 })
 const resdata=await res.json()
-console.log('hellllllll',resdata)
+console.log('edit data',resdata)
 navigate('/orderlist')
-
-
-
   }
 
   return (
@@ -64,8 +56,8 @@ navigate('/orderlist')
          <div className='w-auto mt-3 h-10 flex flex-row justify-between '> 
 <h1 className='fw-bold'>Add New Order</h1>
 <div className='sub-div w-80 h-10'>
-<button onClick={handlealldatalist} className='w-28  text-white ms-3 h-10 bg-purple-700 ' style={{border:"1px solid purple",borderTop:"none",borderRight:"none",borderLeft:"none"}}>Order List</button>
-<button className='w-40 h-10 ms-8 ' style={{border:"1px solid purple",borderTop:"none",borderRight:"none",borderLeft:"none"}}>Add New Order</button>
+<button className='w-28  text-white ms-3 h-10 bg-purple-700 ' style={{border:"1px solid purple",borderTop:"none",borderRight:"none",borderLeft:"none"}}>Shipment List</button>
+<button className='w-40 h-10 ms-8 ' style={{border:"1px solid purple",borderTop:"none",borderRight:"none",borderLeft:"none"}}>Add New Shipment</button>
 </div>
       </div>
       <hr className='bg-slate-700  w-100 mt-3'/>
@@ -289,8 +281,8 @@ navigate('/orderlist')
   </tbody>
 </table>
 <div className=' w-96 mt-3 flex flex-row gap-3 ms-96'>
-    <Link onClick={handlealldatalist} className=' btn btn-join w-48 h-11 bg-white' style={{borderRadius:"5px",border:"1px solid black"}}>Cancel</Link>
-    <button onClick={handleSubmit} className='w-48 h-11 text-white bg-purple-500' style={{borderRadius:"5px"}}>Save</button>
+    <button  className=' btn btn-join w-48 h-11 bg-white' style={{borderRadius:"5px",border:"1px solid black"}}>Cancel</button>
+    <button onClick={handleEdit} className='w-48 h-11 text-white bg-purple-500' style={{borderRadius:"5px"}}>Save</button>
 
 </div>
 
@@ -298,4 +290,4 @@ navigate('/orderlist')
   )
 }
 
-export default AddNeworder
+export default EditOrderlist

@@ -41,7 +41,7 @@ const Addnewbuyer = () => {
  
   
   
-  const res=await fetch('http://localhost:8080/api/create',{
+  const res=await fetch('http://localhost:8080/api/createbuyer',{
     method:'post',
     headers:{
       'content-type':'application/json'
@@ -61,8 +61,8 @@ const Addnewbuyer = () => {
                 
                 
 
-                    <Link to='/supplierlist' className='w-32  text-white ms-3 h-10 bg-purple-700 ' style={{ border: "1px solid purple", borderTop: "none", borderRight: "none", borderLeft: "none" }}>Supplier List</Link>
-                    <Link to='/createaddsupplier' className='w-36 text-white ms-3 h-14 bg-purple-700 ' style={{ border: "1px solid purple", borderTop: "none", borderRight: "none", borderLeft: "none" }}>Add New Supplier</Link>
+                    <Link to='/buyerlist' className='w-32  text-white ms-3 h-10 bg-purple-700 ' style={{ border: "1px solid purple", borderTop: "none", borderRight: "none", borderLeft: "none" }}>Supplier List</Link>
+                    <Link  className='w-36 text-white ms-3 h-14 bg-purple-700 ' style={{ border: "1px solid purple", borderTop: "none", borderRight: "none", borderLeft: "none" }}>Add New Supplier</Link>
                  
                 </div>
                 

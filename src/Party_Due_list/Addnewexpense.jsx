@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-const Adddnewincomecategory = () => {
+const Adddnewexpense = () => {
   return (
     <div className='px-3'>
          <div className='w-full px-2 mt-8 flex  justify-between '>
-<h1 className='fw-bold text-lg'>Add New Income Category</h1>
+<h1 className='fw-bold text-lg'>Add New Expense Category</h1>
 <div className='w-72 flex justify-between h-9' style={{border:"1px solid purple",borderTop:"none",borderRight:"none",borderLeft:"none"}}>
-<Link to='/Income' className='w-20 h-9 flex items-center justify-center' style={{border:"1px solid black",borderTop:"none",borderRight:"none",borderLeft:"none"}}> <p className='text-md'>Income List</p> </Link>
+<Link to='/expenselist' className='w-20 h-9 flex items-center justify-center' style={{border:"1px solid black",borderTop:"none",borderRight:"none",borderLeft:"none"}}> <p className='text-md'>Expense List</p> </Link>
 
-<button className='w-44  text-white rounded-t-md ms-3 h-9 bg-purple-700 ' style={{border:"1px solid purple",borderTop:"none",borderRight:"none",borderLeft:"none"}}>Add New Income Category</button>
+<button className='w-44  text-white rounded-t-md ms-3 h-9 bg-purple-700 ' style={{border:"1px solid purple",borderTop:"none",borderRight:"none",borderLeft:"none"}}>Add New Expense Category</button>
 </div>
       </div>
       <hr className='w-full h-1 mt-3'/>
@@ -29,7 +29,7 @@ const Adddnewincomecategory = () => {
       </div>
       </div>
       <div className=' w-96 mt-14 flex  gap-3 ml-20'>
-    <Link to={'/Income'} className=' btn btn-join w-48 h-11 bg-white' style={{borderRadius:"5px",border:"1px solid black"}}>Cancel</Link>
+    <Link to={'/expenselist'} className=' btn btn-join w-48 h-11 bg-white' style={{borderRadius:"5px",border:"1px solid black"}}>Cancel</Link>
     <button  className='w-48 h-11 text-white bg-purple-500' style={{borderRadius:"5px"}}>Save</button>
 
 </div>
@@ -37,4 +37,4 @@ const Adddnewincomecategory = () => {
   )
 }
 
-export default Adddnewincomecategory
+export default Adddnewexpense

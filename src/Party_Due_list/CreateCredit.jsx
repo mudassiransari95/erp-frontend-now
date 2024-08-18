@@ -3,22 +3,22 @@ import { Link } from 'react-router-dom'
 
 const Createcredit = () => {
   return (
-    <div className='w-75 pl-5 mt-4 ' style={{height:"100%"}}>
-         <div className='w-auto mt-3 h-10 flex flex-row justify-between '> 
+    <div className='w-100 px-3 mt-4 ' style={{height:"100%"}}>
+         <div className='w-full mt-3 h-10 flex  justify-between items-center'> 
 <h1 className='fw-bold'>Create Voucher</h1>
-<div className='sub-div w-96 h-10'>
-<button className='w-28  text-white ms-3 h-10 bg-purple-700 ' style={{border:"1px solid purple",borderTop:"none",borderRight:"none",borderLeft:"none"}}>Credit List</button>
-<button className='w-40 h-10 ms-8 ' style={{border:"1px solid purple",borderTop:"none",borderRight:"none",borderLeft:"none"}}>Credit Voucher</button>
+<div className=' w-80 flex justify-between h-9' style={{border:"1px solid purple",borderTop:"none",borderRight:"none",borderLeft:"none"}}>
+<Link to={'/creditvoucherlist'}  className='w-36  pl-3 pt-2 font-semibold  h-9 text-white rounded-t-md bg-purple-700' style={{border:"1px solid purple",borderTop:"none",borderRight:"none",borderLeft:"none"}}>Credit list</Link>
+<Link to='/createcredit' className='w-64 h-9 text-md text-black  pt-2 pl-3' style={{border:"1px solid purple",borderTop:"none",borderRight:"none",borderLeft:"none"}}> Create Voucher </Link>
 
 </div>
       </div>
       <hr className='bg-slate-700  w-100 mt-3'/>
 
         {/* main div */}
-        <div className='w-auto flex flex-row  mt-4 gap-5'>
+        <div className='m-auto flex w-fit pt-3 gap-5'>
 
 {/* sub-div */}
-<div className='w-auto  h-96 gap-8' >
+<div className='w-auto h-96 gap-8' >
 <div class="collecion-input flex flex-col gap-10 w-96">
 <div className='w-auto    flex flex-row'>
 <select className="select h-11 w-80 "style={{border:"1px solid  grey" }}>
@@ -56,7 +56,7 @@ const Createcredit = () => {
 
 </div>
 {/* second-col */}
-<div className='w-auto h-96 gap-8' >
+<div className='w-auto  gap-8' >
 <div class="collecion-input flex flex-col gap-10 w-96">
 <div className='w-auto h-12  bg-white   flex flex-row 'style={{border:"1px solid grey"}}>
     <p className='mt-3 ms-3'>
@@ -94,7 +94,7 @@ const Createcredit = () => {
         </div>
 
   
-<div className=' w-96 mt-3 flex flex-row gap-3 ms-96  '>
+<div className=' w-96 mt-3 flex  gap-3 ms-96  '>
     <button className=' btn btn-join w-48 h-11 bg-white' style={{borderRadius:"5px",border:"1px solid black"}}>Cancel</button>
     <button className='w-48 h-11 text-white bg-purple-500' style={{borderRadius:"5px"}}>Save</button>
 

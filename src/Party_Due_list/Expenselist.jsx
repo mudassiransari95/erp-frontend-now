@@ -14,7 +14,7 @@ import 'jspdf-autotable'
 import { useRef } from 'react';
 
 
-const Incomelist = () => {
+const Expenselist = () => {
   
 
   const componentRef = useRef();
@@ -34,12 +34,12 @@ const Incomelist = () => {
   const [deletebutton, setdeletebutton] = useState(false);
   return (
     <div className='w-100 px-3 bg-white' style={{height:"100vh"}}>
-            <div className='w-auto pt-4 mt-10 h-10 flex flex-row justify-between '> 
-<h1 className='fw-bold' style={{fontSize:"20px"}}>Income List
+            <div className=' pt-4 mt-10 h-9 flex justify-between '> 
+<h1 className='fw-bold' style={{fontSize:"20px"}}>Expense List
 </h1>
 <div className=' w-80 flex justify-between h-9' style={{border:"1px solid purple",borderTop:"none",borderRight:"none",borderLeft:"none"}}>
 <Link  className='w-36  pl-3 pt-2 font-semibold  h-9 text-white rounded-t-md bg-purple-700' style={{border:"1px solid purple",borderTop:"none",borderRight:"none",borderLeft:"none"}}>Income List</Link>
-<Link to='/addnewincome' className='w-64 h-9 text-md text-black  pt-2 pl-3' style={{border:"1px solid purple",borderTop:"none",borderRight:"none",borderLeft:"none"}}>Add New Income Category </Link>
+<Link to='/addnewexpense' className='w-64 h-9 text-md text-black  pt-2 pl-3' style={{border:"1px solid purple",borderTop:"none",borderRight:"none",borderLeft:"none"}}>Add New Expense Category </Link>
 
 </div>
       </div>
@@ -79,7 +79,9 @@ const Incomelist = () => {
       <Delete/>
       </div>}
         </td>
-   </tr>
+      
+    </tr>
+   
   
   </tbody>
 </table>
@@ -87,4 +89,4 @@ const Incomelist = () => {
   )
 }
 
-export default Incomelist
+export default Expenselist

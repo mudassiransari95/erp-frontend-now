@@ -89,7 +89,7 @@ const AddNewAdmin = ({ onAdminCreated }) => {
             style={{ marginLeft: "600px" }}
             className="btn-group"
             role="group"
-            aria-label="Basic outlined example"
+            aria-p="Basic outlined example"
           >
             <Link to={"/admin"}>
               <button type="button" className="btn btn-outline-primary">
@@ -108,7 +108,7 @@ const AddNewAdmin = ({ onAdminCreated }) => {
             <div style={{ display: "flex", justifyContent: "space-evenly" }} className="container">
               <div>
                 <div className="input-wrapper ">
-                  <label htmlFor="first">Full Name</label>
+                  <p htmlFor="first">Full Name</p>
                   <input
                     ref={fullNameRef}
                     style={{ width: "300px" }}
@@ -121,7 +121,7 @@ const AddNewAdmin = ({ onAdminCreated }) => {
                     ref={roleRef}
                     className="form-select"
                     id="inputGroupSelect04"
-                    aria-label="Example select with button addon"
+                    aria-p="Example select with button addon"
                   >
                     <option value="">Role</option>
                     <option value="Admin">Admin</option>
@@ -130,7 +130,7 @@ const AddNewAdmin = ({ onAdminCreated }) => {
                   </select>
                 </div>
                 <div className="input-wrapper ">
-                  <label htmlFor="first">Password</label>
+                  <p htmlFor="first">Password</p>
                   <input
                     ref={passwordRef}
                     style={{ width: "300px" }}
@@ -141,7 +141,7 @@ const AddNewAdmin = ({ onAdminCreated }) => {
               </div>
               <div>
                 <div className="input-wrapper ">
-                  <label htmlFor="first">Phone</label>
+                  <p htmlFor="first">Phone</p>
                   <input
                     ref={phoneRef}
                     style={{ width: "300px" }}
@@ -150,7 +150,7 @@ const AddNewAdmin = ({ onAdminCreated }) => {
                   />
                 </div>
                 <div className="input-wrapper ">
-                  <label htmlFor="first">Admin Name</label>
+                  <p htmlFor="first">Admin Name</p>
                   <input
                     ref={adminNameRef}
                     style={{ width: "300px" }}
@@ -159,7 +159,7 @@ const AddNewAdmin = ({ onAdminCreated }) => {
                   />
                 </div>
                 <div className="input-wrapper ">
-                  <label htmlFor="first">Confirm Password</label>
+                  <p htmlFor="first">Confirm Password</p>
                   <input
                     ref={confirmPasswordRef}
                     style={{ width: "300px" }}

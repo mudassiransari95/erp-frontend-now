@@ -5,8 +5,8 @@ import { FaUserAlt } from "react-icons/fa";
 import { GrDocumentPdf } from "react-icons/gr";
 import { BsFiletypeScss } from "react-icons/bs";
 import { Link, useNavigate } from 'react-router-dom';
-const Addnewbudget = () => {
- 
+const EditBudgetlist = ({id,handlegetalldata}) => {
+console.log('idjjkdscfid',id)
 const navigate=useNavigate()
 
   
@@ -40,12 +40,10 @@ const navigate=useNavigate()
       })
         }
   
-    const handleSubmit=async(e)=>{
-   e.preventDefault()
-  
-  
-  const res=await fetch('http://localhost:8080/budget/create',{
-    method:'post',
+    const handleSubmit=async()=>{
+
+  const res=await fetch(`http://localhost:8080/budget/update/${id}`,{
+    method:'put',
     headers:{
       'content-type':'application/json'
     },
@@ -53,33 +51,26 @@ const navigate=useNavigate()
   })
   const resdata=await res.json()
   console.log('budget',resdata)
-  navigate('/budget_list')
+  // navigate('/budget_list')
     }
-    const handlecancel=()=>{
-      navigate('/budget_list')
-     } 
+ const handlecancel=()=>{
+  navigate('/budget_list')
+ } 
 
 
   return (
     <div className='w-full bg-red ' style={{height:"100%"}}>
-       <div> 
+      
 
-     
+   <div className='w-full mt-3 h-10 flex px-3 justify-between '>
+        <h3 className='ms-4  ' style={{ fontSize: "25px" }}>Edit List</h3>
+        <div className='sub-div w-auto h-10' style={{ border: "2px solid purple", borderLeft: "none", borderRight: "none", borderTop: "none" }}>
+        <Link to={'/budget_list'} className='w-48 h-10  bg-purple-700 text-white'>Budget List</Link>
 
+        </div>
 
-<div className='w-auto mt-3 h-10 flex items-center justify-between  px-3'> 
-
-<h1 className='fw-bold ms-3'>Create Budget</h1>
-<div className='sub-div w-80 h-10'>
-<Link to={'/budget_list'} className='w-28  text-black ms-3 h-10' style={{border:"1px solid purple",borderTop:"none",borderRight:"none",borderLeft:"none" }} 
- >Budget List</Link>
-<button className='w-40 h-10 ms-8  bg-purple-700 text-white' style={{border:"1px solid purple",borderTop:"none",borderRight:"none",borderLeft:"none"}}>Add New Budget</button>
-
-</div>
-</div>
-<hr className='bg-slate-700  w-100 mt-3'/>
-</div>
-
+      </div>
+  <hr className='bg-slate-700  w-full mt-3' />
 
       <div className='w-auto h-16 flex flex-row  gap-10 ms-2' style={{height:"100vh"}}>
         {/* main div */}
@@ -124,9 +115,7 @@ const navigate=useNavigate()
     <p className='   mt-1 pt-2' style={{fontSize:"13px"}}>Rib</p>
   <input type='text' placeholder='enter rib' className='w-full text-center h-10 ' style={{outline:"none",}} />
   </div>
- 
-  
- 
+
 </div>
 {/* second-col */}
 <div className=' w-96 sub-div ms-2  flex flex-col gap-3'> 
@@ -287,9 +276,9 @@ FACTORY CM TOTAL</div>
     <button onClick={handlecancel} className='w-48 h-11  border text-black' style={{borderRadius:"5px"}}>Cancel</button>
     <button onClick={handleSubmit} className='w-48 h-11 text-white bg-purple-500' style={{borderRadius:"5px"}}>Save</button>
     </div>
-</div>
+</div> 
     </div>
   )
 }
 
-export default Addnewbudget
+export default EditBudgetlist
